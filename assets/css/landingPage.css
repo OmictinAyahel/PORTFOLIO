@@ -1,0 +1,96 @@
+.landingPage {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    background: black;
+    padding-top: 8%;
+
+}
+
+
+.landingPage h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+    color: #E0BFB8;
+}
+
+.landingPage p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: white;
+}
+
+.button {
+    color: white;
+    background: black;
+    height: 38px;
+    width: 120px;
+    font-size: 15px;
+    border: 2px solid #E0BFB8;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #E0BFB8;
+    color: black;
+}
+
+section {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #E0BFB8;
+}
+
+section p, section ul, section .project-list {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+@keyframes blurIn {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.landingPage h1 {
+    animation: blurIn 1s ease-out forwards;
+    opacity: 0; 
+}
+
+.landingPage p {
+    animation: slideIn 1s ease-out forwards;
+    opacity: 0; 
+    animation-delay: 0.5s; 
+}
